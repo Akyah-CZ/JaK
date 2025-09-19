@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2c3e50"/>
+      <stop offset="1" stop-color="#34495e"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#g)"/>
+  <g fill="#ffffff">
+    <!-- Monogram: simple J-K stylized to fit the JaK project name -->
+    <path d="M22 16h8v26a10 10 0 0 1-10 10h-6v-8h6a2 2 0 0 0 2-2V16z"/>
+    <path d="M50 16h-8l-10 16 9 16h9l-9-16 9-16z"/>
+  </g>
+</svg>

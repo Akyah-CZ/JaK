@@ -1,4 +1,4 @@
-export default function Prices() {
+export default function pricing() {
   return (
     <div className="page-content">
       <h1>About Us</h1>
