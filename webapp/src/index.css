@@ -52,3 +52,35 @@ button:focus-visible {
   outline: 3px solid #93c5fd;
   outline-offset: 1px;
 }
+
+
+/* Brand color variables and utilities */
+:root {
+  --color-primary: #2c3e50;       /* header/title base */
+  --color-primary-600: #34495e;   /* hover/alt for primary */
+  --color-secondary: #3498db;     /* accent/link active */
+  --color-secondary-600: #1d84cf; /* hover for secondary */
+  --color-muted: #bdc3c7;         /* subtle text/links in footer */
+  --color-border: #ecf0f1;        /* separators */
+  --color-bg: #f7f9fc;            /* page background */
+  --color-text: #213547;          /* default text */
+}
+
+/* Text color utilities */
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-muted { color: var(--color-muted) !important; }
+.text-inverse { color: #ffffff !important; }
+
+/* Background color utilities */
+.bg-primary { background-color: var(--color-primary) !important; color: #ffffff; }
+.bg-primary-600 { background-color: var(--color-primary-600) !important; color: #ffffff; }
+.bg-secondary { background-color: var(--color-secondary) !important; color: #ffffff; }
+.bg-muted { background-color: var(--color-muted) !important; }
+.bg-page { background-color: var(--color-bg) !important; }
+
+/* Border color utilities */
+.border-primary { border-color: var(--color-primary) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+.border-muted { border-color: var(--color-muted) !important; }
+.border-default { border-color: var(--color-border) !important; }

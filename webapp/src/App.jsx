@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Layout from './components/Layout';
 import Services from './pages/Services';
-import Pricing from './pages/pricing';
+import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import './App.css';

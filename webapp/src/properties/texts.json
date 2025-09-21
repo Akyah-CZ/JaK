@@ -18,15 +18,30 @@
       "icon": "pi-print",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula neque id convallis pharetra. Pellentesque in sem metus. Integer molestie lectus ac urna tempor, in vulputate sapien maximus. Morbi porta lacus id consectetur congue. Vivamus vitae ultrices purus. Phasellus quis lorem et justo tempor viverra. Sed bibendum sem a sapien luctus lacinia. Donec in nulla et lorem fermentum tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;"
     },
-
     "wages": {
       "title": "Vedení mezd",
       "icon": "pi-wallet",
       "text": "Aliquam erat volutpat. Suspendisse in purus id velit venenatis mattis a sit amet justo. Phasellus accumsan eros sit amet dignissim dapibus. Integer vitae diam ut arcu fermentum ullamcorper. Sed commodo varius sapien, id interdum justo efficitur id. Cras eu urna molestie, tristique lacus non, tincidunt lacus. Donec a arcu at risus ultricies lacinia. Suspendisse vitae tortor et lorem facilisis cursus. In hac habitasse platea dictumst. Nam a erat nec augue dapibus efficitur in sit amet elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
     }
   },
+  "pricing": {
+    "title": "Ceník",
+    "accounting": {
+      "title": "Vedení účta",
+      "icon": "pi-print",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula neque id convallis pharetra. Pellentesque in sem metus. Integer molestie lectus ac urna tempor, in vulputate sapien maximus. Morbi porta lacus id consectetur congue. Vivamus vitae ultrices purus. Phasellus quis lorem et justo tempor viverra. Sed bibendum sem a sapien luctus lacinia. Donec in nulla et lorem fermentum tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
+      "form": {
+      }
+    },
+    "wages": {
+      "title": "Vedení mezd",
+      "icon": "pi-wallet",
+      "text": "Aliquam erat volutpat. Suspendisse in purus id velit venenatis mattis a sit amet justo. Phasellus accumsan eros sit amet dignissim dapibus. Integer vitae diam ut arcu fermentum ullamcorper. Sed commodo varius sapien, id interdum justo efficitur id. Cras eu urna molestie, tristique lacus non, tincidunt lacus. Donec a arcu at risus ultricies lacinia. Suspendisse vitae tortor et lorem facilisis cursus. In hac habitasse platea dictumst. Nam a erat nec augue dapibus efficitur in sit amet elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "form": {
+      }
+    }
+  },
   "about": {},
-  "pricing": {},
   "contact": {},
   "icons" : "https://primereact.org/icons/"
 }

@@ -23,9 +23,8 @@ export default function Services() {
         }]
 
 
-    const teaser = (full, len = 70) => (full.length > len ? full.slice(0, len).trim() + '…' : full);
+    const teaser = (full, len = 90) => (full.length > len ? full.slice(0, len).trim() + '…' : full);
     const selected = selectedId ? items.find(i => i.id === selectedId) : null;
-
 
     return (
         <div className="page-content">
