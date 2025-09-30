@@ -11,7 +11,7 @@ function Header() {
             <div className="header-container">
                 <div className="logo">
                     <Link to="/" aria-label="JaK home">
-                        <img src="/vite.svg" alt="JaK" className="logo-img" />
+                        <img src={`${import.meta.env.BASE_URL}vite.svg`} alt="JaK" className="logo-img" />
                     </Link>
                 </div>
                 <nav className="nav">

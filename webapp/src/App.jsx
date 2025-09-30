@@ -7,8 +7,10 @@ import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
+    // Use Vite's BASE_URL as the basename for GitHub Pages deployment (e.g., '/JaK/')
+    const basename = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
     return (
-        <Router>
+        <Router basename={basename}>
             <Layout>
                 <Routes>
                     <Route path="/" element={<Services/>}/>

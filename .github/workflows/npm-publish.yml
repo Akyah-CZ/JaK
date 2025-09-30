@@ -1,17 +1,13 @@
-name: Deploy JaK to Github Pages
+name: Deploy JaK to Github pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ]   # nebo jiná větev, kde máš kód
 
 permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -25,18 +21,17 @@ jobs:
         with:
           node-version: 22
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
       - name: Install dependencies
         working-directory: ./webapp
         run: npm install
 
       - name: Build for GitHub Pages
         working-directory: ./webapp
+        env:
+          GITHUB_PAGES: "true"
         run: npm run build
 
-      - name: Copy index.html to 404.html (SPA fallback)
+      - name: Copy index.html to 404.html
         run: cp ./webapp/dist/index.html ./webapp/dist/404.html
 
       - name: Upload build output
@@ -49,7 +44,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
