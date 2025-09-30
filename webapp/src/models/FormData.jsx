@@ -1,4 +1,4 @@
-const accountingFormConfig = [
+const commonFormData = [
     {
         fieldName: "companyName",
         fieldLabel: "Název společnosti",
@@ -58,6 +58,10 @@ const accountingFormConfig = [
         rows: 16,
         section: "company"
     },
+]
+
+const accountingFormConfig = [
+    ...commonFormData,
     {
         fieldName: "receivedInvoices",
         fieldLabel: "Přijaté faktury",
@@ -131,65 +135,7 @@ const accountingFormConfig = [
 ];
 
 const wagesFormConfig = [
-    {
-        fieldName: "companyName",
-        fieldLabel: "Název společnosti",
-        fieldType: "text",
-        required: true,
-        placeholder: "Název společnosti",
-        section: "company"
-    },
-    {
-        fieldName: "identifier",
-        fieldLabel: "IČO",
-        fieldType: "text",
-        required: true,
-        placeholder: "12345678",
-        section: "company"
-    },
-    {
-        fieldName: "contactName",
-        fieldLabel: "Kontaktní osoba",
-        fieldType: "text",
-        required: true,
-        placeholder: "Jméno a příjmení",
-        section: "company"
-    },
-    {
-        fieldName: "contactEmail",
-        fieldLabel: "E‑mail",
-        fieldType: "text",
-        required: true,
-        placeholder: "vas@email.cz",
-        inputType: "email",
-        section: "company"
-    },
-    {
-        fieldName: "contactPhone",
-        fieldLabel: "Telefon",
-        fieldType: "text",
-        required: false,
-        placeholder: "+420 123 456 789",
-        inputType: "tel",
-        section: "company"
-    },
-    {
-        fieldName: "startDate",
-        fieldLabel: "Počáteční datum spolupráce",
-        fieldType: "date",
-        required: false,
-        placeholder: "Vyberte datum",
-        section: "company"
-    },
-    {
-        fieldName: "description",
-        fieldLabel: "Popis",
-        fieldType: "area",
-        required: false,
-        placeholder: "Doplňující informace…",
-        rows: 16,
-        section: "company"
-    },
+        ...commonFormData,
     {
         fieldName: "numberOfPersonalNumbers",
         fieldLabel: "Počet osobních čísel",

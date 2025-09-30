@@ -66,14 +66,18 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+
+.nav-link.active,
 .nav-link:hover,
 .nav-link:focus-visible {
-    background-color: var(--color-primary-600);
-    outline: none;
+    background-color: var(--color-secondary);
+    color: #fff !important;
 }
 
-.nav-link.active {
-    background-color: var(--color-secondary);
+.nav-link.active .pi,
+.nav-link:hover .pi,
+.nav-link:focus-visible .pi {
+    color: #fff !important;
 }
 
 .footer {

@@ -1,8 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-// PrimeReact v10+ uses @primeuix themes. Replace deprecated theme import.
-import 'primereact/resources/primereact.min.css';
+// import 'primereact/resources/primereact.min.css';
 import 'primereact/resources/themes/lara-light-purple/theme.css';
 import 'primeicons/primeicons.css'
 import App from './App.jsx'

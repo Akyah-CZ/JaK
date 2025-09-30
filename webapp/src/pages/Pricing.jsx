@@ -257,7 +257,7 @@ export default function Pricing() {
                                         </div>
                                     )}
 
-                                    <Button type="submit" label="Odeslat" icon="pi pi-send" severity="secondary" style={{marginTop: '1rem', maxWidth: '10rem'}}/>
+                                    <Button type="submit" label="Odeslat" xicon="pi pi-send" style={{marginTop: '1rem', maxWidth: '10rem'}}/>
                                 </form>
                             </div>
                         </div>
