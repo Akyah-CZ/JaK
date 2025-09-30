@@ -27,7 +27,10 @@ jobs:
 
       - name: Build for GitHub Pages
         working-directory: ./webapp
-        run: npm run build -- --base /JaK/
+        run: npm run build
+
+      - name: Copy index.html to 404.html
+        run: cp ./webapp/dist/index.html ./webapp/dist/404.html
 
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3
