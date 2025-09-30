@@ -84,3 +84,28 @@ button:not(.p-button):focus-visible {
 .border-secondary { border-color: var(--color-secondary) !important; }
 .border-muted { border-color: var(--color-muted) !important; }
 .border-default { border-color: var(--color-border) !important; }
+
+:root {
+  /* Ensure CSS variables are correctly defined (fix for previous ::root typo) */
+  --color-primary: #34495e;       /* header/title base */
+  --color-primary-600: #34495e;   /* hover/alt for primary */
+  --color-secondary: #3498db;     /* accent/link active */
+  --color-secondary-600: #1d84cf; /* hover for secondary */
+  --color-muted: #bdc3c7;         /* subtle text/links in footer */
+  --color-border: #ecf0f1;        /* separators */
+  --color-bg: #f7f9fc;            /* page background */
+  --color-text: #213547;          /* default text */
+}
+
+
+html:root {
+  /* Fallback valid selector to ensure variables are available */
+  --color-primary: #34495e;
+  --color-primary-600: #34495e;
+  --color-secondary: #3498db;
+  --color-secondary-600: #1d84cf;
+  --color-muted: #bdc3c7;
+  --color-border: #ecf0f1;
+  --color-bg: #f7f9fc;
+  --color-text: #213547;
+}

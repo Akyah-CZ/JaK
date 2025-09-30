@@ -298,6 +298,26 @@ img, video, canvas, svg, iframe {
     transform: translateY(1px);
 }
 
+/* Visible hover and active styles for selectable panels */
+.panel.panel-clickable:hover {
+    border-color: var(--color-secondary);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.panel.panel-clickable[aria-pressed="true"] {
+    border-color: var(--color-secondary);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.panel.panel-clickable[aria-pressed="true"] .panel-header {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.panel.panel-clickable[aria-pressed="true"] .panel-header .pi {
+    color: #fff;
+}
+
 .services-grid {
     gap: 1rem;
 }
