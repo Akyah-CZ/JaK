@@ -34,6 +34,9 @@ jobs:
         with:
           path: ./webapp/dist
 
+      - name: Show dist contents
+        run: ls -R ./webapp/dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
