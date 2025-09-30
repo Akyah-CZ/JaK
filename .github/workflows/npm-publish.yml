@@ -33,7 +33,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./webapp/dist
-          destination-dir: webapp
 
   deploy:
     needs: build
