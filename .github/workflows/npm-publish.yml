@@ -1,8 +1,8 @@
-name: Deploy React to GitHub Pages
+name: Deploy JaK to Github pages
 
 on:
   push:
-    branches: [ main ]   # nebo jiná větev, kde máš kód
+    branches: [ master ]   # nebo jiná větev, kde máš kód
 
 permissions:
   contents: read
@@ -22,15 +22,18 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: ./webapp
         run: npm install
 
       - name: Build
+        working-directory: ./webapp
         run: npm run build
 
       - name: Upload build
         uses: actions/upload-pages-artifact@v2
         with:
-          path: build
+          path: ./webapp/dist   # Vite build output
+          destination-dir: webapp
 
   deploy:
     needs: build
