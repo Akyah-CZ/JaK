@@ -8,13 +8,14 @@
     -moz-osx-font-smoothing: grayscale;
 
     --color-primary: #23272a;
-    --color-primary-600: #23272a;
+    --color-primary-600: #1a1d20;
     --color-secondary: #8b5cf6;
-    --color-secondary-600: #8b5cf6;
+    --color-secondary-600: #6d28d9;
     --color-muted: #bdc3c7;
     --color-border: #ecf0f1;
     --color-bg: #f7f9fc;
-    --color-text: #213547;
+    --color-text: #2c3e50;
+    --color-text-secondary: #5d6d7e;
 }
 
 /* Keep anchor defaults simple; App.css will handle nav/footer links */
