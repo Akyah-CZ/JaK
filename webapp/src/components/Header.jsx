@@ -1,9 +1,7 @@
 import {Link, useLocation} from 'react-router-dom';
-import { useTexts } from '../hooks/useTexts.jsx';
 
 function Header() {
     const location = useLocation();
-    const { getText } = useTexts();
 
 
     return (
@@ -20,28 +18,28 @@ function Header() {
                         className={(location.pathname === '/services' || location.pathname === '/') ? 'nav-link active' : 'nav-link'}
                     >
                         <i className="pi pi-cog" aria-hidden="true"></i>
-                        <span>{getText('navigation.service')}</span>
+                        <span>Služby</span>
                     </Link>
                     <Link
                         to="/pricing"
                         className={location.pathname === '/pricing' ? 'nav-link active' : 'nav-link'}
                     >
                         <i className="pi pi-tags" aria-hidden="true"></i>
-                        <span>{getText('navigation.pricing')}</span>
+                        <span>Ceník</span>
                     </Link>
                     <Link
                         to="/contact"
                         className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'}
                     >
                         <i className="pi pi-envelope" aria-hidden="true"></i>
-                        <span>{getText('navigation.contact')}</span>
+                        <span>Kontakt</span>
                     </Link>
                     <Link
                         to="/about"
                         className={location.pathname === '/about' ? 'nav-link active' : 'nav-link'}
                     >
                         <i className="pi pi-info-circle" aria-hidden="true"></i>
-                        <span>{getText('navigation.about')}</span>
+                        <span>O nás</span>
                     </Link>
                 </nav>
             </div>
