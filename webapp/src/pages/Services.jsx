@@ -6,25 +6,56 @@ export default function Services() {
     const items = [
         {
             id: 'left',
-            title: 'Vedení účta',
-            icon: 'pi-print',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula neque id convallis pharetra. Pellentesque in sem metus. Integer molestie lectus ac urna tempor, in vulputate sapien maximus. Morbi porta lacus id consectetur congue. Vivamus vitae ultrices purus. Phasellus quis lorem et justo tempor viverra. Sed bibendum sem a sapien luctus lacinia. Donec in nulla et lorem fermentum tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;',
+            title: 'Vedení účetnictví',
+            icon: 'pi-calculator',
+            keyPoints: [
+                'Podvojné účetnictví a daňová evidence',
+                'Sestavení účetní závěrky',
+                'Přiznání k dani z příjmů a DPH',
+                'Komunikace s finančním úřadem',
+                'Účetní poradenství'
+            ],
+            details: {
+                description: 'Poskytujeme kompletní účetní služby přizpůsobené velikosti a potřebám vašeho podnikání. Naši odborníci zajistí správné vedení účetnictví v souladu s platnými zákony a předpisy. Specializujeme se jak na podvojné účetnictví pro firmy, tak na daňovou evidenci pro OSVČ.',
+                additionalServices: [
+                    'Zpracování a kontrola účetních dokladů',
+                    'Inventarizace majetku a závazků',
+                    'Analýza hospodářských výsledků',
+                    'Příprava podkladů pro audit',
+                    'Poradenství při změnách právní formy'
+                ]
+            }
         },
         {
             id: 'right',
-            title: 'Vedení mezd',
-            icon: 'pi-wallet',
-            text: 'Aliquam erat volutpat. Suspendisse in purus id velit venenatis mattis a sit amet justo. Phasellus accumsan eros sit amet dignissim dapibus. Integer vitae diam ut arcu fermentum ullamcorper. Sed commodo varius sapien, id interdum justo efficitur id. Cras eu urna molestie, tristique lacus non, tincidunt lacus. Donec a arcu at risus ultricies lacinia. Suspendisse vitae tortor et lorem facilisis cursus. In hac habitasse platea dictumst. Nam a erat nec augue dapibus efficitur in sit amet elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-        }]
+            title: 'Mzdové účetnictví',
+            icon: 'pi-users',
+            keyPoints: [
+                'Výpočet mezd a zákonných odvodů',
+                'Zpracování pracovních smluv',
+                'Hlášení pojišťovnám a úřadům',
+                'Roční zúčtování daně',
+                'Personální poradenství'
+            ],
+            details: {
+                description: 'Specializujeme se na komplexní mzdovou agendu a personalistiku. Zajistíme správné výpočty mezd, dodržení všech zákonných povinností a terminů pro hlášení. Naše služby pokrývají vše od běžného zpracování mezd až po složité personální situace.',
+                additionalServices: [
+                    'Evidence docházky a práce přesčas',
+                    'Výpočet nemocenských a ošetřovného',
+                    'Zpracování cestovních náhrad',
+                    'Evidování benefitů a odměn',
+                    'Příprava podkladů pro kontroly'
+                ]
+            }
+        }
+    ];
 
-
-    const teaser = (full, len = 90) => (full.length > len ? full.slice(0, len).trim() + '…' : full);
     const selected = selectedId ? items.find(i => i.id === selectedId) : null;
 
     return (
-        <div className="content">
+        <div className="contact-page">
             <div className="page-header">
-                <h1>Služby</h1>
+                <h1>Nabídka</h1>
                 <p>Nabízíme komplexní účetní a mzdové služby přizpůsobené potřebám vašeho podnikání.</p>
             </div>
 
@@ -51,7 +82,14 @@ export default function Services() {
                                     <span>{item.title}</span>
                                 </div>
                                 <div className="panel-content">
-                                    <p>{teaser(item.text)}</p>
+                                    <ul className="service-items panel-service-items">
+                                        {item.keyPoints.map((point, index) => (
+                                            <li key={index} className="service-item">
+                                                <i className="pi pi-check-circle service-icon" aria-hidden="true"></i>
+                                                <span>{point}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -63,10 +101,26 @@ export default function Services() {
                         <div className="panel">
                             <div className="panel-header">
                                 <i className={`pi ${selected.icon}`} aria-hidden="true"></i>
-                                <span>Detail: {selected.title}</span>
+                                <span>{selected.title} - Detailní informace</span>
                             </div>
                             <div className="panel-content">
-                                <p>{selected.text}</p>
+                                <div className="service-description">
+                                    <p>{selected.details.description}</p>
+                                </div>
+
+                                {selected.details.additionalServices && (
+                                    <div className="service-list">
+                                        <h4>Další služby v rámci {selected.title.toLowerCase()}:</h4>
+                                        <ul className="service-items">
+                                            {selected.details.additionalServices.map((service, index) => (
+                                                <li key={index} className="service-item">
+                                                    <i className="pi pi-angle-right service-icon" aria-hidden="true"></i>
+                                                    <span>{service}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

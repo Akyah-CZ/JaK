@@ -386,20 +386,6 @@ img, video, canvas, svg, iframe {
     font-weight: 600;
 }
 
-/* Contact info header inside map card */
-.contact-info-header {
-    margin-bottom: 2rem;
-}
-
-.contact-info-header h3 {
-    color: var(--color-primary);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-}
-
 /* Contact details grid - responsive layout */
 .contact-details {
     display: grid;
@@ -844,6 +830,81 @@ img, video, canvas, svg, iframe {
     margin-top: 1rem;
 }
 
+/* Pricing Preview Styling */
+.pricing-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pricing-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.pricing-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: space-between;
+}
+
+.pricing-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(139, 92, 246, 0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+}
+
+.pricing-highlight:hover {
+    background: rgba(139, 92, 246, 0.12);
+    border-color: rgba(139, 92, 246, 0.25);
+    transform: translateY(-2px);
+}
+
+.pricing-highlight i {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.pricing-highlight span {
+    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive design for pricing highlights */
+@media (max-width: 768px) {
+    .pricing-highlights {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .pricing-highlight {
+        justify-content: flex-start;
+        min-width: auto;
+    }
+
+    .pricing-highlight span {
+        white-space: normal;
+        text-align: left;
+    }
+}
+
 @media (max-width: 480px) {
     .logo-img {
         height: 32px;
@@ -871,7 +932,7 @@ img, video, canvas, svg, iframe {
 
 /* Bump efekt pro všechny karty */
 .employee-card,
-contact-form-card,
+.contact-form-card,
 .map-card,
 .panel {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -916,4 +977,124 @@ contact-form-card,
 .form-label .required {
     color: #e24c4c;
     margin-left: 2px;
+}
+
+/* Services Panel Styling */
+.panel-service-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.panel-service-items .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: rgba(139, 92, 246, 0.02);
+    border: 1px solid rgba(139, 92, 246, 0.08);
+    transition: all 0.3s ease;
+}
+
+.panel-service-items .service-item:hover {
+    background: rgba(139, 92, 246, 0.06);
+    border-color: rgba(139, 92, 246, 0.15);
+    transform: translateX(3px);
+}
+
+.panel-service-items .service-icon {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+    min-width: 14px;
+}
+
+.panel-service-items .service-item span {
+    color: var(--color-text);
+    line-height: 1.4;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Services Detail Styling */
+.services-detail {
+    margin-top: 2rem;
+}
+
+.service-description {
+    margin-bottom: 1.5rem;
+}
+
+.service-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.service-list h4 {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: rgba(139, 92, 246, 0.03);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    background: rgba(139, 92, 246, 0.08);
+    border-color: rgba(139, 92, 246, 0.2);
+    transform: translateX(5px);
+}
+
+.service-icon {
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+    min-width: 16px;
+}
+
+.service-item span {
+    color: var(--color-text);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Responsive design for service items */
+@media (max-width: 768px) {
+    .service-item:hover,
+    .panel-service-items .service-item:hover {
+        transform: translateY(-2px);
+    }
+
+    .service-items {
+        gap: 0.5rem;
+    }
+
+    .service-item {
+        padding: 0.5rem;
+    }
+
+    .panel-service-items .service-item {
+        padding: 0.4rem;
+    }
 }

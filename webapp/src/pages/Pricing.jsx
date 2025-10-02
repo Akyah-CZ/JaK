@@ -74,20 +74,28 @@ export default function Pricing() {
     const items = [
         {
             id: 'left',
-            title: 'Vedení účta',
-            icon: 'pi-print',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula neque id convallis pharetra. Pellentesque in sem metus. Integer molestie lectus ac urna tempor, in vulputate sapien maximus. Morbi porta lacus id consectetur congue. Vivamus vitae ultrices purus. Phasellus quis lorem et justo tempor viverra. Sed bibendum sem a sapien luctus lacinia. Donec in nulla et lorem fermentum tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;',
+            title: 'Vedení účetnictví',
+            icon: 'pi-calculator',
+            description: 'Cenové nabídky sestavujeme individuálně podle rozsahu služeb.',
+            highlights: [
+                { icon: 'pi-users', text: 'Pro OSVČ i s.r.o.' },
+                { icon: 'pi-calendar', text: 'Měsíční paušál' },
+                { icon: 'pi-phone', text: 'Konzultace zdarma' }
+            ],
             form: accountingFormConfig
         },
         {
             id: 'right',
-            title: 'Vedení mezd',
-            icon: 'pi-wallet',
-            text: 'Aliquam erat volutpat. Suspendisse in purus id velit venenatis mattis a sit amet justo. Phasellus accumsan eros sit amet dignissim dapibus. Integer vitae diam ut arcu fermentum ullamcorper. Sed commodo varius sapien, id interdum justo efficitur id. Cras eu urna molestie, tristique lacus non, tincidunt lacus. Donec a arcu at risus ultricies lacinia. Suspendisse vitae tortor et lorem facilisis cursus. In hac habitasse platea dictumst. Nam a erat nec augue dapibus efficitur in sit amet elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+            title: 'Mzdové účetnictví',
+            icon: 'pi-users',
+            description: 'Transparentní ceník podle počtu zaměstnanců. Bez skrytých poplatků.',
+            highlights: [
+                { icon: 'pi-user', text: 'Od 1 zaměstnance' },
+                { icon: 'pi-percentage', text: 'Slevy od 5+ lidí' },
+                { icon: 'pi-shield', text: 'Vše v ceně' }
+            ],
             form: wagesFormConfig
         }]
-
-    const teaser = (full, len = 90) => (full.length > len ? full.slice(0, len).trim() + '…' : full);
 
     const targetEmail = 'info@jakucetnictvi.cz';
 
@@ -248,7 +256,7 @@ export default function Pricing() {
     return (
         <div className="content">
             <div className="page-header">
-                <h1>Ceník</h1>
+                <h1>Poptávka</h1>
                 <p>Vyberte si službu a vyplňte poptávkový formulář pro získání cenové nabídky na míru.</p>
             </div>
 
@@ -275,7 +283,17 @@ export default function Pricing() {
                                     <span>{item.title}</span>
                                 </div>
                                 <div className="panel-content">
-                                    <p>{teaser(item.text)}</p>
+                                    <div className="pricing-preview">
+                                        <p className="pricing-description">{item.description}</p>
+                                        <div className="pricing-highlights">
+                                            {item.highlights.map((highlight, index) => (
+                                                <div key={index} className="pricing-highlight">
+                                                    <i className={`pi ${highlight.icon}`}></i>
+                                                    <span>{highlight.text}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

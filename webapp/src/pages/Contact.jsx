@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <div className="content">
             <div className="page-header">
-                <h1>Kontakt</h1>
+                <h1>Kontaktní údaje</h1>
                 <p>Nebojte se nás kontaktovat, emailem, telefonicky či osobně.</p>
             </div>
 
@@ -14,12 +14,6 @@ export default function Contact() {
                 <div className="contact-content">
                     <div className="map-section">
                         <Card className="map-card">
-                            <div className="contact-info-header">
-                                <h3>
-                                    <i className="pi pi-building" style={{ marginRight: '0.5rem' }}></i>
-                                    Kontaktní údaje
-                                </h3>
-                            </div>
                             <div className="contact-details">
                                 <div className="contact-detail-item">
                                     <i className="pi pi-id-card"></i>
