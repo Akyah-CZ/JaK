@@ -256,7 +256,7 @@ export default function Pricing() {
     return (
         <div className="content">
             <div className="page-header">
-                <h1>Poptávka</h1>
+                <h1>Ceník</h1>
                 <p>Vyberte si službu a vyplňte poptávkový formulář pro získání cenové nabídky na míru.</p>
             </div>
 

@@ -22,21 +22,14 @@ export default function Contact() {
                                         <a href="https://or.justice.cz/ias/ui/rejstrik-$firma?ico=23034009" target="_blank" rel="noopener noreferrer" className="contact-link">
                                             23034009
                                         </a>
-                                        <br/><br/>
-                                        <strong>DIČ:</strong><br/>
-                                        <a href="https://or.justice.cz/ias/ui/rejstrik-$firma?ico=23034009" target="_blank" rel="noopener noreferrer" className="contact-link">
-                                            CZ23034009
-                                        </a>
                                     </div>
                                 </div>
                                 <div className="contact-detail-item">
-                                    <i className="pi pi-map-marker"></i>
+                                    <i className="pi pi-id-card"></i>
                                     <div>
-                                        <strong>Adresa:</strong><br/>
-                                        <a href="https://www.google.com/maps/dir//t%C5%99.+Kpt.+Jaro%C5%A1e+1922%2F3,+602+00+Brno-st%C5%99ed-%C4%8Cern%C3%A1+Pole/@49.2003418,16.6081936,17z/data=!4m18!1m8!3m7!1s0x4712945bf2a662fb:0xcac6679cc4ee2021!2zdMWZLiBLcHQuIEphcm_FoWUgMTkyMi8zLCA2MDIgMDAgQnJuby1zdMWZZWQtxIxlcm7DoSBQb2xl!3b1!8m2!3d49.2003418!4d16.6107685!16s%2Fg%2F11c1zsv73_!4m8!1m0!1m5!1m1!1s0x4712945bf2a662fb:0xcac6679cc4ee2021!2m2!1d16.6107685!2d49.2003418!3e3?entry=ttu&g_ep=EgoyMDI1MDkzMC4wIKXMDSoASAFQAw%3D%3D"
-                                           target="_blank" rel="noopener noreferrer" className="contact-link">
-                                            tř. Kpt. Jaroše 1922/3<br/>
-                                            602 00 Brno-střed-Černá Pole
+                                        <strong>DIČ:</strong><br/>
+                                        <a href="https://or.justice.cz/ias/ui/rejstrik-$firma?ico=23034009" target="_blank" rel="noopener noreferrer" className="contact-link">
+                                            CZ23034009
                                         </a>
                                     </div>
                                 </div>
@@ -59,13 +52,14 @@ export default function Contact() {
                                     </div>
                                 </div>
                                 <div className="contact-detail-item">
-                                    <i className="pi pi-clock"></i>
+                                    <i className="pi pi-map-marker"></i>
                                     <div>
-                                        <strong>Úřední hodiny:</strong><br/>
-                                        Po-Pá: 8:00 - 16:00<br/>
-                                        <small style={{ color: 'var(--color-secondary-600)' }}>
-                                            Doporučujeme předchozí domluvu
-                                        </small>
+                                        <strong>Adresa:</strong><br/>
+                                        <a href="https://www.google.com/maps/dir//t%C5%99.+Kpt.+Jaro%C5%A1e+1922%2F3,+602+00+Brno-st%C5%99ed-%C4%8Cern%C3%A1+Pole/@49.2003418,16.6081936,17z/data=!4m18!1m8!3m7!1s0x4712945bf2a662fb:0xcac6679cc4ee2021!2zdMWZLiBLcHQuIEphcm_FoWUgMTkyMi8zLCA2MDIgMDAgQnJuby1zdMWZZWQtxIxlcm7DoSBQb2xl!3b1!8m2!3d49.2003418!4d16.6107685!16s%2Fg%2F11c1zsv73_!4m8!1m0!1m5!1m1!1s0x4712945bf2a662fb:0xcac6679cc4ee2021!2m2!1d16.6107685!2d49.2003418!3e3?entry=ttu&g_ep=EgoyMDI1MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+                                           target="_blank" rel="noopener noreferrer" className="contact-link">
+                                            tř. Kpt. Jaroše 1922/3<br/>
+                                            602 00 Brno-střed-Černá Pole
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="contact-detail-item">
@@ -78,6 +72,18 @@ export default function Contact() {
                                         </small>
                                     </div>
                                 </div>
+
+                                {/*<div className="contact-detail-item">*/}
+                                {/*    <i className="pi pi-clock"></i>*/}
+                                {/*    <div>*/}
+                                {/*        <strong>Úřední hodiny:</strong><br/>*/}
+                                {/*        Po-Pá: 8:00 - 16:00<br/>*/}
+                                {/*        <small style={{ color: 'var(--color-secondary-600)' }}>*/}
+                                {/*            Doporučujeme předchozí domluvu*/}
+                                {/*        </small>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+
                             </div>
 
                             <div className="map-container">

@@ -55,7 +55,7 @@ export default function Services() {
     return (
         <div className="contact-page">
             <div className="page-header">
-                <h1>Nabídka</h1>
+                <h1>Služby</h1>
                 <p>Nabízíme komplexní účetní a mzdové služby přizpůsobené potřebám vašeho podnikání.</p>
             </div>
 
