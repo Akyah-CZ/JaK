@@ -238,7 +238,7 @@ export default function Pricing() {
                 default: return v ?? '';
             }
         };
-        const sectionsOrder = ['company', 'documents', 'specification'];
+        const sectionsOrder = ['company', 'documents', 'personalNumbers', 'specification'];
         const bodyLines = [`Služba: ${serviceTitle}`];
         sectionsOrder.forEach(sec => {
             currentConfig
@@ -333,6 +333,16 @@ export default function Pricing() {
                                             <h3 style={{margin: '0 0 0.5rem'}}>Měsíční objemy dokladů</h3>
                                             <div className="row g-3">
                                                 {currentConfig.filter(f => f.section === 'documents').map(fieldRenderer)}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* Počet osobních čísel */}
+                                    {currentConfig.some(f => f.section === 'personalNumbers') && (
+                                        <div className="form-section" style={{marginTop: '1rem'}}>
+                                            <h3 style={{margin: '0 0 0.5rem'}}>Počet osobních čísel</h3>
+                                            <div className="row g-3">
+                                                {currentConfig.filter(f => f.section === 'personalNumbers').map(fieldRenderer)}
                                             </div>
                                         </div>
                                     )}

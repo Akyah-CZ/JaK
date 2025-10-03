@@ -137,20 +137,12 @@ const accountingFormConfig = [
 const wagesFormConfig = [
         ...commonFormData,
     {
-        fieldName: "numberOfPersonalNumbers",
-        fieldLabel: "Počet osobních čísel",
-        fieldType: "int",
-        required: true,
-        placeholder: "0",
-        section: "documents"
-    },
-    {
         fieldName: "mainEmploymentContract",
         fieldLabel: "Hlavní pracovní poměr",
         fieldType: "int",
         required: true,
         placeholder: "0",
-        section: "documents"
+        section: "personalNumbers"
     },
     {
         fieldName: "workPerformanceContract",
@@ -158,7 +150,7 @@ const wagesFormConfig = [
         fieldType: "int",
         required: true,
         placeholder: "0",
-        section: "documents"
+        section: "personalNumbers"
     },
     {
         fieldName: "activityAgreement",
@@ -166,7 +158,7 @@ const wagesFormConfig = [
         fieldType: "int",
         required: true,
         placeholder: "0",
-        section: "documents"
+        section: "personalNumbers"
     },
     {
         fieldName: "functionPerformanceContract",
@@ -174,7 +166,7 @@ const wagesFormConfig = [
         fieldType: "int",
         required: true,
         placeholder: "0",
-        section: "documents"
+        section: "personalNumbers"
     },
 ];
 
