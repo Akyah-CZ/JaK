@@ -91,7 +91,7 @@ export default function Pricing() {
             description: 'Transparentní ceník podle počtu zaměstnanců. Bez skrytých poplatků.',
             highlights: [
                 { icon: 'pi-user', text: 'Od 1 zaměstnance' },
-                { icon: 'pi-percentage', text: 'Slevy od 5+ lidí' },
+                { icon: 'pi-percentage', text: 'Příplatky od 5+ lidí' },
                 { icon: 'pi-shield', text: 'Vše v ceně' }
             ],
             form: wagesFormConfig
