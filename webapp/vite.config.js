@@ -6,6 +6,6 @@ export default defineConfig(() => {
   const isGithubPages = process.env.GITHUB_PAGES === 'true';
   return {
     plugins: [react()],
-    base: isGithubPages ? '/JAK/' : '/',
+    base: isGithubPages ? '/JaK/' : '/',
   };
 });
