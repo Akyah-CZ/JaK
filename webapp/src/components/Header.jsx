@@ -8,8 +8,8 @@ function Header() {
         <header className="header">
             <div className="header-container">
                 <div className="logo">
-                    <Link to="/" aria-label="JaK home">
-                        <img src={"./logo_ai_1.png"} alt="JaK" className="logo-img" />
+                    <Link to="/" aria-label="JAK home">
+                        <img src={"./logo_ai.png"} alt="JAK" className="logo-img" />
                     </Link>
                 </div>
                 <nav className="nav">

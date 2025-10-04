@@ -1,4 +1,4 @@
-name: Deploy JaK to Github pages
+name: Deploy JAK to Github pages
 
 on:
   push:
